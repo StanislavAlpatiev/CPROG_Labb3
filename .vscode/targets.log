@@ -5,9 +5,8 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Tue Nov 16 12:40:07 2021
+# Make data base, printed on Thu Nov 18 09:57:10 2021
 
 # Variables
 
@@ -24,7 +23,7 @@ USERPROFILE = C:\Users\46739
 # environment
 LOCALAPPDATA = C:\Users\46739\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-2126820a-e07d-412b-87ba-91c258c100ba-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-273a1dc0-cf0e-4356-af74-62b381b2c145-sock
 # makefile (from 'Makefile', line 2)
 SRC_DIR = src
 # environment
@@ -44,7 +43,7 @@ MAKE_COMMAND := make
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11712_EZUHCRZCUUQXFDFX
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8148_SUQEDFSAMAPJYJRS
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -74,7 +73,7 @@ MAKEFLAGS = pqrR
 # environment
 ONEDRIVE = C:\Users\46739\OneDrive
 # makefile
-CURDIR := /c/Users/46739/Desktop/University/HT21/CPROG/dev/labb2
+CURDIR := /c/Users/46739/Desktop/University/HT21/CPROG/dev/CPROG_Labb3
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -88,7 +87,7 @@ MFLAGS = -pqrR
 # default
 .SHELLFLAGS := -c
 # environment
-!C: = c:\Users\46739\Desktop\University\HT21\CPROG\dev\labb2
+!C: = c:\Users\46739\Desktop\University\HT21\CPROG\dev\CPROG_Labb3
 # environment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # automatic
@@ -100,7 +99,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 11712
+VSCODE_PID = 8148
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -158,7 +157,6 @@ COMMONPROGRAMFILES = C:\Program Files\Common Files
 # automatic
 ?F = $(notdir $?)
 # environment
- 
 PROGRAMW6432 = C:\Program Files
 # makefile (from 'Makefile', line 6)
 OBJ_NAME = play
@@ -243,10 +241,10 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
 
 # Directories
 
-# src (device 1546775529, inode 48976645948057558): 6 files, no impossibilities.
-# . (device 1546775529, inode 34621422135426296): 9 files, no impossibilities.
+# src (device 1546775529, inode 19703248370034434): 5 files, no impossibilities.
+# . (device 1546775529, inode 5066549580889435): 11 files, no impossibilities.
 
-# 15 files, no impossibilities in 2 directories.
+# 16 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -257,8 +255,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
-#  Last modified 2021-11-05 11:56:03.8202601
+#  Last modified 2021-11-16 12:49:18.854956
 #  File has been updated.
 #  Successfully updated.
 
@@ -311,12 +308,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 139 B / avg = 8 B
-# current buf: size = 8162 B / used = 139 B / count = 17 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 136 B / avg = 7 B
+# current buf: size = 8162 B / used = 136 B / count = 18 / avg = 7 B
 
-# strcache performance: lookups = 27 / hit rate = 37%
+# strcache performance: lookups = 28 / hit rate = 35%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/27=0%
-# Finished Make data base on Tue Nov 16 12:40:07 2021
+# Load=18/8192=0%, Rehash=0, Collisions=0/28=0%
+# Finished Make data base on Thu Nov 18 09:57:10 2021
 
  

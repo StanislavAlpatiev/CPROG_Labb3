@@ -1,3 +1,4 @@
+// Stanislav Alpatiev stal5991@student.su.se
 // Labb3, Datum.h – klassdefinition
 
 #ifndef DATUM_H
@@ -21,7 +22,7 @@ class Datum
 public:
     Datum(int, int, int);
     void set_date(int, int, int); // set year, month, day
-
+    const bool operator==(const Datum &other);
     //OBS. funktionen "step_one_day()" bör vara PRIVATE
     void step_one_day();           // Öka datum med en dag
     static bool is_skott_aar(int); // Är det skottår?

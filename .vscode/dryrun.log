@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/c/Users/46739/Desktop/University/HT21/CPROG/dev/labb2'
-g++ -std=c++17 -Wall -O0 -g -IC/:msys64/mingw64/include -LC/:msys64/mingw64/lib src/IntVector.cpp src/labb2.cpp src/labb2_main.cpp -lmingw32 -lSDL2main -lSDL2 -o build/debug/play
-make: Leaving directory '/c/Users/46739/Desktop/University/HT21/CPROG/dev/labb2'
+make: Entering directory '/c/Users/46739/Desktop/University/HT21/CPROG/dev/CPROG_Labb3'
+g++ -std=c++17 -Wall -O0 -g -IC/:msys64/mingw64/include -LC/:msys64/mingw64/lib src/Datum.cpp src/labb3_main.cpp -lmingw32 -lSDL2main -lSDL2 -o build/debug/play
+make: Leaving directory '/c/Users/46739/Desktop/University/HT21/CPROG/dev/CPROG_Labb3'
  

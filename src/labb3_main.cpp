@@ -1,3 +1,4 @@
+// Stanislav Alpatiev stal5991@student.su.se
 // Labb3, Datum
 
 #include <iostream>
@@ -173,32 +174,32 @@ void min_print_eval()
 
 void first_print()
 {
-    std::cout << "Skapa ett datumobjekt med datum \"28 Februari 2020\" \n -> ";
-    Datum dat1(2020, 2, 28);
-    std::cout << dat1 << std::endl;
+  std::cout << "Skapa ett datumobjekt med datum \"28 Februari 2020\" \n -> ";
+  Datum dat1(2020, 2, 28);
+  std::cout << dat1 << std::endl;
 
-    std::cout << "Öka datum med 1 dag (i detta fall skottdag!) \n -> ";
-    dat1.step_one_day();
-    std::cout << dat1 << std::endl;
+  std::cout << "Öka datum med 1 dag (i detta fall skottdag!) \n -> ";
+  dat1.step_one_day();
+  std::cout << dat1 << std::endl;
 
-    std::cout << "Öka datum med 1 dag (i detta fall ny månad!) \n -> ";
-    dat1.step_one_day();
-    std::cout << dat1 << std::endl;
-    std::cout << std::endl;
+  std::cout << "Öka datum med 1 dag (i detta fall ny månad!) \n -> ";
+  dat1.step_one_day();
+  std::cout << dat1 << std::endl;
+  std::cout << std::endl;
 }
 
 int main(int argc, const char *argv[])
 {
-    /* Denna uppgift kan du kompilera och köra från början. Du anropar bara
+  /* Denna uppgift kan du kompilera och köra från början. Du anropar bara
    * funktionen "first_print()".
    * Funktionen "max_print()" testar alla de funktioner som du skall skriva.
    * För att utvärdera/evaluate din lösning i VPL, så skall endast "min_print_eval()"
    * köras, "max_print()" och "first_print()"skall då vara bortkommenterade.
    */
 
-    first_print();
-    //max_print();
-    //min_print_eval();
+  first_print();
+  //max_print();
+  //min_print_eval();
 
-    return 0;
+  return 0;
 }

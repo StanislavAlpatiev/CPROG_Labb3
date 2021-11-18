@@ -1,3 +1,4 @@
+// Stanislav Alpatiev stal5991@student.su.se
 // Labb3, Datum.cpp – definitioner av icke-triviala medlemsfunktioner
 
 #include <iostream>
@@ -63,8 +64,21 @@ bool Datum::end_of_month(int dd) const
         return dd == ANT_DAGAR_PER_MAANAD[month];
 }
 
+const bool Datum::operator==(const Datum &other)
+{
+    if (year != other.year || month != other.month || day != other.day)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 // operator<<
-std::ostream &operator<<(std::ostream &output, const Datum &d)
+std::ostream &
+operator<<(std::ostream &output, const Datum &d)
 {
     // OBS. Glöm inte att modifiera vad som skrivs ut!
     output << d.year << '-' << d.month << '-' << d.day;
