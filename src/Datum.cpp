@@ -8,6 +8,15 @@
 // Initialisera statisk medlem
 // (första elementet används inte i denna lösning!)
 const std::array<unsigned int, 13> Datum::ANT_DAGAR_PER_MAANAD = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+const std::array<std::string, 12> Datum::MONTH_NAMES =
+    {"January", "February", "March", "April", "May", "Jun", "July",
+     "August", "September", "October", "November", "December"};
+
+//Default constructor
+Datum::Datum()
+{
+    set_date(2000, 1, 1);
+}
 
 // Konstruktor
 Datum::Datum(int year, int month, int day)
@@ -17,6 +26,26 @@ Datum::Datum(int year, int month, int day)
 
 void Datum::set_date(int yy, int mm, int dd)
 {
+    if (yy < 2000 || yy > 2100)
+    {
+        std::invalid_argument("Året måste vara mellan >= 2000 och <= 2100");
+    }
+    if (mm < 1 || mm > 12)
+    {
+        std::invalid_argument("Månaden måste vara >= 1 och <= 12");
+    }
+
+    bool isLeapYear = is_skott_aar(yy);
+    int maxDaysInMonth = ANT_DAGAR_PER_MAANAD[mm];
+
+    if (isLeapYear == true && mm == 2)
+    {
+        maxDaysInMonth = 29;
+    }
+    if (dd < 1 || dd > maxDaysInMonth)
+    {
+        std::invalid_argument("Dagen stämmer inte med år och månad");
+    }
     // Glöm inte att kontrollera inmatade värden, annars "exception"
     year = yy;
     month = mm;
@@ -76,11 +105,162 @@ const bool Datum::operator==(const Datum &other)
     }
 }
 
+const bool Datum::operator!=(const Datum &other)
+{
+    if (year != other.year || month != other.month || day != other.day)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+const bool Datum::operator<(const Datum &other)
+{
+    if (year < other.year)
+    {
+        return true;
+    }
+    else if (year > other.year)
+    {
+        return false;
+    }
+    else if (month < other.month)
+    {
+        return true;
+    }
+    else if (month > other.month)
+    {
+        return false;
+    }
+    else if (day < other.day)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+const bool Datum::operator>(const Datum &other)
+{
+    if (year < other.year)
+    {
+        return false;
+    }
+    else if (year > other.year)
+    {
+        return true;
+    }
+    else if (month < other.month)
+    {
+        return false;
+    }
+    else if (month > other.month)
+    {
+        return true;
+    }
+    else if (day <= other.day)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+const bool Datum::operator<=(const Datum &other)
+{
+    if (year <= other.year)
+    {
+        return true;
+    }
+    else if (year > other.year)
+    {
+        return false;
+    }
+    else if (month <= other.month)
+    {
+        return true;
+    }
+    else if (month > other.month)
+    {
+        return false;
+    }
+    else if (day <= other.day)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+const bool Datum::operator>=(const Datum &other)
+{
+    if (year >= other.year)
+    {
+        return true;
+    }
+    else if (year < other.year)
+    {
+        return false;
+    }
+    else if (month >= other.month)
+    {
+        return true;
+    }
+    else if (month < other.month)
+    {
+        return false;
+    }
+    else if (day < other.day)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+void Datum::operator++()
+{
+    step_one_day();
+}
+
+void Datum::operator++(int dd)
+{
+    step_one_day();
+}
+
+Datum Datum::operator+(int dd)
+{
+    for (int i = 0; i < dd; i++)
+    {
+        step_one_day();
+    }
+    return *this;
+}
+
+void Datum::operator+=(int dd)
+{
+    for (int i = 0; i < dd; i++)
+    {
+        step_one_day();
+    }
+}
+
 // operator<<
 std::ostream &
-operator<<(std::ostream &output, const Datum &d)
+operator<<(std::ostream &os, const Datum &date)
 {
     // OBS. Glöm inte att modifiera vad som skrivs ut!
-    output << d.year << '-' << d.month << '-' << d.day;
-    return output;
+    os << date.day << '-' << date.MONTH_NAMES[date.month - 1] << '-' << date.year;
+    return os;
 }
