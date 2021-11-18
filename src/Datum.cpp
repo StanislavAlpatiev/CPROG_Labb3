@@ -229,17 +229,20 @@ const bool Datum::operator>=(const Datum &other)
     }
 }
 
-void Datum::operator++()
+Datum Datum::operator++()
 {
     step_one_day();
+    return *this;
 }
 
-void Datum::operator++(int dd)
+Datum Datum::operator++(int dd)
 {
     step_one_day();
+    return *this;
 }
 
-Datum Datum::operator+(int dd)
+const Datum Datum::operator+(int dd)
+
 {
     for (int i = 0; i < dd; i++)
     {
@@ -248,12 +251,20 @@ Datum Datum::operator+(int dd)
     return *this;
 }
 
-void Datum::operator+=(int dd)
+const Datum Datum::operator+(const Datum &other) const
+{
+    //Datum tmp(*this);
+    //other + ;
+    //return tmp;
+}
+
+Datum Datum::operator+=(int dd)
 {
     for (int i = 0; i < dd; i++)
     {
         step_one_day();
     }
+    return *this;
 }
 
 // operator<<

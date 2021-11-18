@@ -30,10 +30,11 @@ public:
     const bool operator>(const Datum &other);
     const bool operator<=(const Datum &other);
     const bool operator>=(const Datum &other);
-    void operator++();
-    void operator++(int dd);
-    Datum operator+(int dd);
-    void operator+=(int dd);
+    Datum operator++();
+    Datum operator++(int dd);
+    const Datum operator+(int dd);
+    const Datum operator+(const Datum &other) const;
+    Datum operator+=(int dd);
     //void operator();
     //OBS. funktionen "step_one_day()" bör vara PRIVATE
     void step_one_day();           // Öka datum med en dag
