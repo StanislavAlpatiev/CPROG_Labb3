@@ -10,7 +10,7 @@
 class Datum
 {
     friend std::ostream &operator<<(std::ostream &os, const Datum &date);
-    friend Datum &operator+(const Datum &date);
+    //friend Datum &operator+(const Datum &date);
     unsigned int year;
     unsigned int month;
     unsigned int day;
@@ -30,16 +30,21 @@ public:
     const bool operator>(const Datum &other);
     const bool operator<=(const Datum &other);
     const bool operator>=(const Datum &other);
-    Datum operator++();
-    Datum operator++(int dd);
-    const Datum operator+(int dd);
-    const Datum operator+(const Datum &other) const;
-    Datum operator+=(int dd);
+    const Datum operator++();
+    const Datum operator++(int dd);
+    const Datum operator+(int dd) const;
+    //const Datum operator+(const Datum &other) const;
+    const Datum operator+=(int dd);
     //void operator();
     //OBS. funktionen "step_one_day()" bör vara PRIVATE
     void step_one_day();           // Öka datum med en dag
     static bool is_skott_aar(int); // Är det skottår?
     bool end_of_month(int) const;  // Är dagen den sista i månaden?
+};
+
+inline const Datum operator+(int days, const Datum &date)
+{
+    return date + days;
 };
 
 #endif

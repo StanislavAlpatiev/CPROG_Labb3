@@ -175,7 +175,7 @@ const bool Datum::operator>(const Datum &other)
 
 const bool Datum::operator<=(const Datum &other)
 {
-    if (year <= other.year)
+    if (year < other.year)
     {
         return true;
     }
@@ -183,7 +183,7 @@ const bool Datum::operator<=(const Datum &other)
     {
         return false;
     }
-    else if (month <= other.month)
+    else if (month < other.month)
     {
         return true;
     }
@@ -229,36 +229,29 @@ const bool Datum::operator>=(const Datum &other)
     }
 }
 
-Datum Datum::operator++()
+const Datum Datum::operator++()
 {
     step_one_day();
     return *this;
 }
 
-Datum Datum::operator++(int dd)
+const Datum Datum::operator++(int dd)
 {
     step_one_day();
     return *this;
 }
 
-const Datum Datum::operator+(int dd)
-
+const Datum Datum::operator+(int dd) const
 {
+    Datum date = *this;
     for (int i = 0; i < dd; i++)
     {
-        step_one_day();
+        date.step_one_day();
     }
-    return *this;
+    return date;
 }
 
-const Datum Datum::operator+(const Datum &other) const
-{
-    //Datum tmp(*this);
-    //other + ;
-    //return tmp;
-}
-
-Datum Datum::operator+=(int dd)
+const Datum Datum::operator+=(int dd)
 {
     for (int i = 0; i < dd; i++)
     {
