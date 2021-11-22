@@ -45,6 +45,6 @@ public:
 inline const Datum operator+(int days, const Datum &date)
 {
     return date + days;
-};
+}
 
 #endif

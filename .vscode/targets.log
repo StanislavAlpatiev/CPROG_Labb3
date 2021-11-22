@@ -5,10 +5,12 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Thu Nov 18 09:57:10 2021
+# Make data base, printed on Mon Nov 22 12:09:25 2021
 
 # Variables
+ 
 
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
@@ -23,11 +25,11 @@ USERPROFILE = C:\Users\46739
 # environment
 LOCALAPPDATA = C:\Users\46739\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-273a1dc0-cf0e-4356-af74-62b381b2c145-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6f1bc337-6077-457a-b9e6-1b491fc6adb0-sock
 # makefile (from 'Makefile', line 2)
 SRC_DIR = src
 # environment
-VSCODE_CWD = C:\Users\46739\AppData\Local\Programs\Microsoft VS Code
+VSCODE_CWD = C:\WINDOWS\system32
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -43,7 +45,7 @@ MAKE_COMMAND := make
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8148_SUQEDFSAMAPJYJRS
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6336_TLSPAZVHCEKYCLDV
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -99,7 +101,7 @@ MAKEFILE_LIST := Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 8148
+VSCODE_PID = 6336
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -156,6 +158,7 @@ USERNAME = 46739
 COMMONPROGRAMFILES = C:\Program Files\Common Files
 # automatic
 ?F = $(notdir $?)
+ 
 # environment
 PROGRAMW6432 = C:\Program Files
 # makefile (from 'Makefile', line 6)
@@ -233,7 +236,9 @@ INCLUDE_PATHS = -IC/:msys64/mingw64/include
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
 # variable set hash-table stats:
+ 
 # Load=111/1024=11%, Rehash=0, Collisions=13/150=9%
+ 
 
 # Pattern-specific Variable Values
 
@@ -301,6 +306,7 @@ all:
 #  File has not been updated.
 
 # files hash-table stats:
+ 
 # Load=4/1024=0%, Rehash=0, Collisions=0/16=0%
 # VPATH Search Paths
 
@@ -314,6 +320,6 @@ all:
 # strcache performance: lookups = 28 / hit rate = 35%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Thu Nov 18 09:57:10 2021
+# Finished Make data base on Mon Nov 22 12:09:25 2021
 
  

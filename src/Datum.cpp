@@ -237,8 +237,9 @@ const Datum Datum::operator++()
 
 const Datum Datum::operator++(int dd)
 {
+    Datum tempDate = *this;
     step_one_day();
-    return *this;
+    return tempDate;
 }
 
 const Datum Datum::operator+(int dd) const
@@ -265,6 +266,6 @@ std::ostream &
 operator<<(std::ostream &os, const Datum &date)
 {
     // OBS. Glöm inte att modifiera vad som skrivs ut!
-    os << date.day << '-' << date.MONTH_NAMES[date.month - 1] << '-' << date.year;
+    os << date.day << ' ' << date.MONTH_NAMES[date.month - 1] << ' ' << date.year;
     return os;
 }
